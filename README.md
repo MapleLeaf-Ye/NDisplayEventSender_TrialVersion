@@ -13,9 +13,9 @@ Copyright Ye RongZhen(MapleLeaf_Ye) 2024
  ## Chinese: 在使用UE的nDisplay架构时，我们总是苦于创建可以执行在各个节点（设备）的函数或事件（以下我称之为多节点事件）。通常我们需要在某一个各个节点都存在的Actor实现nDisplay提供的Display Cluster Cluster Event Listener接口，然后在使用Emit JSON cluster event 或者 Emit Binary cluster event API发消息，将需要执行的函数名字，参数等分发过去，然后在接口实现那边具体判断是哪个函数，同时涉及到参数类型的转换（传过来的都是字符串或者二进制）。这一系列的操作十分繁琐，并且这些多节点事件不好管理。那么这个时候就想，如果有那么一个东西可以改变正常的函数或者事件，自动帮助处理函数参数并分发事件的东西就好了，在这个东西的帮助下实现多节点事件与一般的函数或事件一致，几乎没有太大变化。这，就是这款插件带来的功能。
   
 # Just like this  
-![BPExample_1](D:\UEMarketPlace\NDisplayEventSender\GitHub\Resource\BPExample_1.png)  
+![BPExample_1](Resource/BPExample_1.png)  
   
-![BPExample_2](D:\UEMarketPlace\NDisplayEventSender\GitHub\Resource\BPExample_2.png)  
+![BPExample_2](Resource/BPExample_2.png)  
 
 # ***How to use ?***  
   
@@ -23,17 +23,17 @@ Copyright Ye RongZhen(MapleLeaf_Ye) 2024
   
 ## Step1: Now, if you have a function like this, it's just a normal function  
 ## 如果你现在有一个这样普普通通的函数  
-![Step1.png](D:\UEMarketPlace\NDisplayEventSender\GitHub\Resource\Step1.png)  
+![Step1.png](Resource/Step1.png)  
   
 ## Step2: If you want this piece of logic to be executed on each node you can change it like this  
 ## 如果你希望将这段逻辑运行在各个节点上可以这样更改  
-![Step2.png](D:\UEMarketPlace\NDisplayEventSender\GitHub\Resource\Step2.png)  
+![Step2.png](Resource/Step2.png)  
 ## As you can see, the whole function has not changed much, except to add a plug-in node ExecuteMultiNodeEvent_Auto at the beginning of the function and pass the parameters of the function into this node, but this has already implemented the conversion of the ordinary function to a multi-node event  
 ## 可以看到整个函数没有太大的改动，只是在函数的最开始添加了一个插件内的节点ExecuteMultiNodeEvent_Auto并将函数的参数传入该节点内，不过这样已经实现了该普通函数转化为多节点事件  
   
 ## Step3: Now this function can be easily executed anywhere, for example by triggering it from the UI button, and when it is triggered, it will be triggered on each node  
 ## 现在这个函数可以很方便的在各个地方执行，例如通过UI的按钮触发它，当触发的时候就会触发在各个节点上  
-![Step3.png](D:\UEMarketPlace\NDisplayEventSender\GitHub\Resource\Step3.png)  
+![Step3.png](Resource/Step3.png)  
   
 ## C++:  
   
@@ -86,7 +86,7 @@ class NDISMEDIA_API ATestClass : public AActor
   
 ## At present, almost all types can be supported under the test, including custom structure/enumeration, object reference pointer type need to pay attention to the existence of each node, the principle of object reference pointer type is passed by soft reference, all plug-ins need each node to hold this object to run without error  
 ## 目前测试下来几乎所有类型都可以支持，包括自定义结构体/枚举，对象引用指针类型需要注意各个节点存在，原理上对象引用指针类型是通过软引用传递的，所有插件需要各个节点都持有这个对象运行才不会出错  
-![SupportedType.png](D:\UEMarketPlace\NDisplayEventSender\GitHub\Resource\SupportedType.png)  
+![SupportedType.png](Resource/SupportedType.png)  
   
 # *The full version gets the address*  
 # *完整版插件获取地址*  
