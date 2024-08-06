@@ -6,6 +6,23 @@ Copyright Ye RongZhen(MapleLeaf_Ye) 2024
 ## Description:  
 ### _Use with nDisplay. Change function or event to multi nodes function or event sended to every node then execute them logic._  
   
+
+# UPDATED:  
+## NDisplayEventSender_6.2 update detail  
+### *1. The supported types are TArray, TSet, and TMap*  
+### *2. UE4.27 will be supported*  
+### *3. Add the reset function to pin of the ExecuteMultiNodeEvent_Auto node*  
+### *4. Add the ExecuteMultiNodeEvent_Auto node to use standard verification and inform the standard usage of an error message*  
+### *5. Rectify the node serialization problem*  
+### *6. Add warning pop-ups*  
+  
+### *1.支持类型TArray，TSet，TMap*  
+### *2.将支持UE4.27*  
+### *3.ExecuteMultiNodeEvent_Auto节点引脚增加reset类型功能*  
+### *4.增加ExecuteMultiNodeEvent_Auto节点使用规范校验，报错告知规范使用*  
+### *5.修复节点序列化问题*  
+### *6.新增警告弹窗*  
+  
   
  # What do plug-ins do?  
  ## Engine: When using UE's nDisplay architecture, we always struggled to create functions or events (which I'll call multi-node events) that could be executed on individual nodes (devices). Usually, we need to implement the Display Cluster Cluster Event Listener interface provided by nDisplay in an Actor that exists on all nodes. Then Emit JSON cluster event or Emit Binary cluster event API to send a message, distribute the name and parameters of the function to be executed, and then determine which function it is on the interface implementation side. It also involves the conversion of parameter types (all passed are strings or binary). This series of operations is cumbersome, and these multi-node events are not easy to manage. It would be nice to have something that can change normal functions or events, automatically help handle function parameters and distribute events, and implement multi-node events with the help of this thing to be consistent with normal functions or events, with little change. That's what this plugin does.  
