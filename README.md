@@ -10,7 +10,7 @@ Copyright Ye RongZhen(MapleLeaf_Ye) 2024
 # UPDATED:  
 ## NDisplayEventSender_6.2 update detail  
 ### *1. The supported types are TArray, TSet, and TMap*  
-### *2. UE4.27 will be supported*  
+### *2. UE4.27、UE5.4 will be supported*  
 ### *3. Add the reset function to pin of the ExecuteMultiNodeEvent_Auto node*  
 ### *4. Add the ExecuteMultiNodeEvent_Auto node to use standard verification and inform the standard usage of an error message*  
 ### *5. Rectify the node serialization problem*  
