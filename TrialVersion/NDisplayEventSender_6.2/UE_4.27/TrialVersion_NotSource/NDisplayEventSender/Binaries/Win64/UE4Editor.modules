@@ -1,0 +1,8 @@
+{
+	"BuildId": "17155196",
+	"Modules": 
+	{
+		"NDisplayEventSender": "UE4Editor-NDisplayEventSender.dll",
+		"NDisplayEventSenderEditor": "UE4Editor-NDisplayEventSenderEditor.dll"
+	}
+}

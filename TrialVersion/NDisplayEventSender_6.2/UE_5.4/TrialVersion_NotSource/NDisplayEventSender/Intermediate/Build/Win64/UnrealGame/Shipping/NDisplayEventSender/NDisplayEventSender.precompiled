@@ -1,0 +1,9 @@
+{
+	"OutputFiles": [
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\NDisplayEventSender\\Module.NDisplayEventSender.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\NDisplayEventSender\\BL_NDisplayEventSender.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\NDisplayEventSender\\NDisplayEventManager.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\NDisplayEventSender\\NDisplayEventSender.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\NDisplayEventSender\\NDisplayEventSubsystem.cpp.obj"
+	]
+}

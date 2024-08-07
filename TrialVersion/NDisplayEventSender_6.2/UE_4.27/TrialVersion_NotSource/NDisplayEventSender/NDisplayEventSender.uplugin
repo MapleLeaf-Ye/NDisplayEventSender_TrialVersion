@@ -1,0 +1,40 @@
+{
+	"FileVersion": 3,
+	"Version": 6,
+	"VersionName": "6.2",
+	"FriendlyName": "NDisplayEventSender",
+	"Description": "Use with nDisplay. Change function or event to multi nodes function or event sended to every node then execute them logic.",
+	"Category": "Other",
+	"CreatedBy": "MapleLeaf_Ye",
+	"CreatedByURL": "https://space.bilibili.com/35611577?spm_id_from=333.1007.0.0",
+	"DocsURL": "https://github.com/MapleLeaf-Ye/NDisplayEventSender_TrialVersion",
+	"MarketplaceURL": "",
+	"SupportURL": "https://github.com/MapleLeaf-Ye/NDisplayEventSender_TrialVersion",
+	"EngineVersion": "4.27.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "NDisplayEventSender",
+			"Type": "Runtime",
+			"LoadingPhase": "PostEngineInit",
+			"WhitelistPlatforms": [
+				"Win64"
+			]
+		},
+		{
+			"Name": "NDisplayEventSenderEditor",
+			"Type": "UncookedOnly",
+			"LoadingPhase": "Default",
+			"WhitelistPlatforms": [
+				"Win64"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "nDisplay",
+			"Enabled": true
+		}
+	]
+}
