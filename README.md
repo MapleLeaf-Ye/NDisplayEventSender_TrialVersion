@@ -23,6 +23,11 @@ Copyright Ye RongZhen(MapleLeaf_Ye) 2024
 ### *5.修复节点序列化问题*  
 ### *6.新增警告弹窗*  
   
+# Notes:  
+## 1.If you find that the program does not run after using the plugin packaging, check the log and find an error like "ColorCorrectRegions failed to load ", then convert the project to C++ and successfully package the project. The root cause is that the engine's plugins are not pre-compiled, which results in loading failure after packaging.  
+  
+## 1.如果你发现使用插件打包后程序运行不了，查看日志发现是类似于"ColorCorrectRegions 加载失败"这种错误，那么将工程转化为C++工程即可成功打包。根本原因是引擎的插件没有预编译这些插件导致打包出来后加载失败。
+  
   
  # What do plug-ins do?  
  ## Engine: When using UE's nDisplay architecture, we always struggled to create functions or events (which I'll call multi-node events) that could be executed on individual nodes (devices). Usually, we need to implement the Display Cluster Cluster Event Listener interface provided by nDisplay in an Actor that exists on all nodes. Then Emit JSON cluster event or Emit Binary cluster event API to send a message, distribute the name and parameters of the function to be executed, and then determine which function it is on the interface implementation side. It also involves the conversion of parameter types (all passed are strings or binary). This series of operations is cumbersome, and these multi-node events are not easy to manage. It would be nice to have something that can change normal functions or events, automatically help handle function parameters and distribute events, and implement multi-node events with the help of this thing to be consistent with normal functions or events, with little change. That's what this plugin does.  

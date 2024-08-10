@@ -1,4 +1,4 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+// Copyright Ye RongZhen(MapleLeaf_Ye) 2024
 
 using UnrealBuildTool;
 
