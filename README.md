@@ -24,11 +24,11 @@ Copyright Ye RongZhen(MapleLeaf_Ye) 2024
 ### *6.新增警告弹窗*  
   
 # Notes:  
-## 1.If you find that the program does not run after using the plugin packaging, check the log and find an error like "ColorCorrectRegions failed to load ", then convert the project to C++ and successfully package the project. The root cause is that the engine's plugins are not pre-compiled, which results in loading failure after packaging.  
+## 1.If you find that the program does not run after using the plugin packaging, check the log and find an error like "ColorCorrectRegions failed to load ", then convert the project to C++ and successfully package the project.  
   
 ## 2.If you are a pure blueprint project do not want to switch to C++, then please put the plug-in into the engine plug-in directory, so that you can ensure that there is no packaging error, and the program can run normally after packaging.  
   
-## 1.如果你发现使用插件打包后程序运行不了，查看日志发现是类似于"ColorCorrectRegions 加载失败"这种错误，那么将工程转化为C++工程即可成功打包。根本原因是引擎的插件没有预编译这些插件导致打包出来后加载失败。  
+## 1.如果你发现使用插件打包后程序运行不了，查看日志发现是类似于"ColorCorrectRegions 加载失败"这种错误，那么将工程转化为C++工程即可成功打包。  
   
 ## 2.如果你是纯蓝图工程不希望转C++，那么请把插件放到引擎插件的目录下，这样可以确保不会打包出错，且打包后程序可以正常运行。  
   
